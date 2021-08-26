@@ -1,4 +1,5 @@
 import 'package:demo_add_mobx/addListView.dart';
+import 'package:demo_add_mobx/screen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -45,6 +46,20 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
+            Container(
+              child: Text("Hello"),
+            ),
+            Container(
+              child: TextButton(
+                child: Text("Sang"),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => MyAppT()));
+                },
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
